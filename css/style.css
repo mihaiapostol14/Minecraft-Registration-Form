@@ -1,0 +1,121 @@
+/* Reset box-sizing for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Visually hidden utility for accessibility */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important; 
+    border: 0 !important;
+}
+
+/* Minecraft-inspired pixel background */
+body {
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #242424;
+    background-image:
+        linear-gradient(45deg, #3a3a3a 25%, transparent 25%),
+        linear-gradient(-45deg, #3a3a3a 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #3a3a3a 75%),
+        linear-gradient(-45deg, transparent 75%, #3a3a3a 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    background: rgba(60, 60, 60, 0.97);
+    border-radius: 12px;
+    width: 400px;
+    max-width: 95vw;
+    padding: 32px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.form p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    display: block;
+    width: 90%;
+    margin: 12px auto;
+    background: rgba(40, 40, 40, 0.95);
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+    border-color: #72eaff;
+    background: #232628;
+}
+
+.form button[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 20px auto 0 auto;
+    padding: 12px;
+    background: linear-gradient(90deg, #3fc5ff, #47e6b6);
+    color: #232628;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.form button[type="submit"]:hover,
+.form button[type="submit"]:focus {
+    background: linear-gradient(90deg, #47e6b6, #3fc5ff);
+    color: #111;
+}
+
+@media (max-width: 500px) {
+    .form {
+        width: 98vw;
+        padding: 16px 6px;
+        font-size: 0.95rem;
+    }
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="password"],
+    .form button[type="submit"] {
+        width: 98%;
+        font-size: 0.95rem;
+    }
+}
