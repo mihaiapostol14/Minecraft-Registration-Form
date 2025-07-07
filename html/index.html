@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Minecraft Registration Form </title>
+</head>
+<body>
+    <main>
+        <section class="form">
+            <form action="#" autocomplete="off">
+                <p>Minecraft Registration Form</p>
+
+                <label for="FirstName" class="visually-hidden">First Name</label>
+                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" autocomplete="given-name" required>
+
+                <label for="SecondName" class="visually-hidden">Last Name</label>
+                <input type="text" name="SecondName" id="SecondName" placeholder="Last Name" autocomplete="family-name" required>
+
+                <label for="Email" class="visually-hidden">Email</label>
+                <input type="email" name="Email" id="Email" placeholder="Email" autocomplete="email" required>
+
+                <label for="Password" class="visually-hidden">Password</label>
+                <input type="password" name="Password" id="Password" placeholder="Password" autocomplete="new-password" required minlength="6">
+
+                <label for="ConfirmPassword" class="visually-hidden">Confirm Password</label>
+                <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Confirm Password" autocomplete="new-password" required minlength="6">
+
+                <button type="submit" id="ButtonSubmit">Register</button>
+            </form>
+        </section>
+    </main>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>
